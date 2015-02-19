@@ -2,7 +2,7 @@
 //  FirstViewController.m
 //  ContaPessoas
 //
-//  Created by Humberto Juliao on 2/18/15.
+//  Created by Vinicius Miana on 2/18/15.
 //  Copyright (c) 2015 Vinicius Miana. All rights reserved.
 //
 
@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    contador = [[Contador alloc] init];
+    contador = [Contador getInstance];
     // adicionando linhas comentadas...
 //    NSLog(@"resultado esperado é ...");
 }
