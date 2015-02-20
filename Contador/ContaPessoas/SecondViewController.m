@@ -9,9 +9,6 @@
 #import "SecondViewController.h"
 #import "Contador.h"
 
-@protocol ADelegate <NSObject>
-
-@end
 
 @interface SecondViewController () {
       Contador *contador;
