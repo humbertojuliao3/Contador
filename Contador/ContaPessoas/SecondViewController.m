@@ -9,6 +9,10 @@
 #import "SecondViewController.h"
 #import "Contador.h"
 
+@protocol ADelegate <NSObject>
+
+@end
+
 @interface SecondViewController () {
       Contador *contador;
 }
@@ -17,9 +21,16 @@
 
 @implementation SecondViewController
 
+-(void) atualizar{
+    _totalBoys.text = [NSString stringWithFormat: @"%d", [contador getBoys]];
+    _totalGirls.text = [NSString stringWithFormat: @"%d", [contador getGirls]];
+    _total.text = [NSString stringWithFormat:@"%d", [contador getTotal]];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     contador = [Contador getInstance];
+    contador.mostrar=self;
+    [self atualizar];
 }
 
 
